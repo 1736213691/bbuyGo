@@ -1,0 +1,47 @@
+server:
+  port: 8080
+
+spring:
+  # Redis数据库索引（默认为0）
+  redis:
+    database: 0
+  # Redis服务器地址
+    host: 127.0.0.1
+  # Redis服务器连接端口
+    port: 6379
+  # Redis服务器连接密码（默认为空）
+    password:
+  # 连接池最大连接数（使用负值表示没有限制）
+    lettuce:
+      pool:
+        max-active: 20
+  # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+  # 连接池中的最大空闲连接
+        max-idle: 10
+  # 连接池中的最小空闲连接
+        min-idle: 0
+  # 连接超时时间（毫秒）
+    timeout: 1000
+  profiles.active: aeolian
+    ## MULTIPART (MultipartProperties)
+    # 开启 multipart 上传功能
+  servlet.multipart.enabled: true
+    # 文件写入磁盘的阈值
+  servlet.multipart.file-size-threshold: 1KB
+    # 最大文件大小
+  servlet.multipart.max-file-size: 200MB
+    # 最大请求大小
+  servlet.multipart.max-request-size: 215MB
+  thymeleaf:
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+    url: jdbc:mysql://127.0.0.1:3306/order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+logging:
+  level:
+    com:
+      sw:
+        order: debug
