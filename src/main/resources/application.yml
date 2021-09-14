@@ -1,12 +1,19 @@
+file:
+#  path: /usr/bbuygo/
+  path: E:/bbuygo/
 server:
-  port: 8080
-
+  port: 80
+#  ssl:
+#    key-store: classpath:www.songwen.top.jks
+#    key-store-password: 6uh2d6611cke
+#    key-store-type: JKS
+#    enabled: true
 spring:
   # Redis数据库索引（默认为0）
   redis:
     database: 0
   # Redis服务器地址
-    host: 127.0.0.1
+    host: 119.91.100.241
   # Redis服务器连接端口
     port: 6379
   # Redis服务器连接密码（默认为空）
@@ -38,8 +45,9 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password:
-    url: jdbc:mysql://127.0.0.1:3306/order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    password: Song-wen-sd-127
+    url: jdbc:mysql://119.91.100.241:3306/bbuygo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://192.168.11.55:3306/order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
 logging:
   level:
     com:
